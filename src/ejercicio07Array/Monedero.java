@@ -1,7 +1,7 @@
 package ejercicio07Array;
 
 public class Monedero {
- private double dinero;
+private double dinero;
 
 public Monedero(double dinero) {
 	super();
@@ -20,18 +20,8 @@ public void setDinero(double dinero) {
 public String toString() {
 	return "Monedero [dinero=" + dinero + "]";
 }
- 
-public double crearMonedero (double dinero, double dineroIngresado) {
-	
-	return dinero + dineroIngresado;
-	
-}
-public double ingresarDinero (double dinero, double dineroIngresado) {
-	this.dinero=dinero+dineroIngresado;
-	return this.dinero;
-}
-public double retirarDinero (double dinero, double dineroIngresado) {
-	this.dinero=dinero-dineroIngresado;
-	return this.dinero;
-}
+
+
+
+
 }

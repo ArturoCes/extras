@@ -10,7 +10,7 @@ public class Entrada {
 	
 	public Entrada(int id, int fila, int butaca) {
 		super();
-		Entrada.precio = 4.50;
+		Entrada.precio = 5.95;
 		this.id = id;
 		this.disponible = true;
 		this.fila = fila;

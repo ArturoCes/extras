@@ -60,18 +60,13 @@ public class Cliente {
 	}
 	@Override
 	public String toString() {
-		if(actividad) {
-			System.out.println("Actividad:Activo");
-		}
-		else {
-			System.out.println("Actividad:Inactivo");
-		}
 		return "Cliente \n"
 				+"Dni:" + dni +"\n"
-				+"Nombre:" + nombre +"\n" 
-			    +"Apellidos:" + apellidos+ "\n"+ 
-			    	"Peso:" + peso + "\n"
-				+"Estatura:" + altura+"\n";
+				+"Nombre" + nombre +"\n" 
+			    +"Apellidos=" + apellidos+ "\n"+ 
+				"Actividad:" + actividad +"\n"
+				+"Peso:" + peso + "\n"
+				+"Altura=" + altura+"\n";
 	}
 	public double calcularIMC () {
 		return peso/Math.pow(altura, 2);

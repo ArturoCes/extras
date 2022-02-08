@@ -7,7 +7,7 @@ public class Principal {
 	public static void main(String[] args) {
 		// TODO ApÃ©ndice de mÃ©todo generado automÃ¡ticamente
 		
-		int fila=1, asiento=1, idAsiento=1, idSala=1, opcion=0;
+		int fila=1, butaca=1, idAsiento=1, idSala=1, opcion=0;
 		double precioEntrada;
 		
 		Entrada entrada;
@@ -26,7 +26,7 @@ public class Principal {
 			}
 		}
 			System.out.println("Bienvenidos a CINEMA");
-			System.out.println("Â¿QuÃ© desea hacer?");
+			System.out.println("¿Qué desea hacer?");
 		do {
 			System.out.println("1)Para comprar entrada");
 			System.out.println("2)Ver ganancias totales del dia");
@@ -38,13 +38,13 @@ public class Principal {
 			case 1:
 				System.out.println("Ingrese la fila que desea");
 				fila=Leer.datoInt();
-				System.out.println("Ingrese el nÃºmero de asiento");
-				asiento=Leer.datoInt();
-				if(sala.getAsientos()[asiento][fila].isdisponible()) {
-					System.out.println("El coste de la entrada es: "+sala.getAsientos()[asiento][fila].getPrecio()+" $");
-					System.out.println("El asiento numero "+sala.getAsientos()[asiento][fila].getId()+" ha sido comprado exitosamente");
-					sala.getAsientos()[asiento][fila].setdisponible(false);
-					sala.setDineroRecaudado(sala.getDineroRecaudado()+sala.getAsientos()[asiento][fila].getPrecio());
+				System.out.println("Ingrese el número de butaca");
+				butaca=Leer.datoInt();
+				if(sala.getAsientos()[butaca][fila].isdisponible()) {
+					System.out.println("El coste de la entrada es: "+sala.getAsientos()[butaca][fila].getPrecio()+" $");
+					System.out.println("El asiento numero "+sala.getAsientos()[butaca][fila].getId()+" ha sido comprado exitosamente");
+					sala.getAsientos()[butaca][fila].setdisponible(false);
+					sala.setDineroRecaudado(sala.getDineroRecaudado()+sala.getAsientos()[butaca][fila].getPrecio());
 				}else {
 					System.out.println("Lo siento, este asiento ya se encuentra ocupado");
 				}
@@ -53,11 +53,15 @@ public class Principal {
 				System.out.println("Las ganancias totales del dia son: "+sala.getDineroRecaudado()+"$");
 				break;
 			case 3: 
-				System.out.println("El coste actual de la entrada es: "+sala.getAsientos()[asiento][fila].getPrecio()+"$");
+				System.out.println("Ingrese su número de fila");
+				fila=Leer.datoInt();
+				System.out.println("Ingrese el número de butaca");
+				butaca=Leer.datoInt();
+				System.out.println("El coste actual de la entrada es: "+sala.getAsientos()[butaca][fila].getPrecio()+"$");
 				System.out.println("Ingrese el nuevo precio de la entrada");
 				precioEntrada=Leer.datoDouble();
-				sala.getAsientos()[asiento][fila].setPrecio(precioEntrada);
-				System.out.println("El nuevo coste de la entrada es de: "+sala.getAsientos()[asiento][fila].getPrecio()+"$");
+				sala.getAsientos()[butaca][fila].setPrecio(precioEntrada);
+				System.out.println("El nuevo coste de la entrada es de: "+sala.getAsientos()[butaca][fila].getPrecio()+"$");
 				break;
 			case 4:
 				sala.mostrarCartelera();

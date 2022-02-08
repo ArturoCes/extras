@@ -6,47 +6,58 @@ public class Principal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int opcion =0;
-		Monedero m = new Monedero (0);
-		double dineroIngresado=0.0;
+		Monedero m = null ;
+		int opcion=0;
+		double dineroBase=0.0,dineroIngresado=0.0,dinero=0.0,dineroRetirado=0.0;
 		do {
-		System.out.println("Bienvenido");
-		System.out.println("Ingrese el dinero base del nuevo monedero");
-		dineroIngresado=Leer.datoDouble();
-		m.crearMonedero(m.getDinero(), dineroIngresado);
-		m.setDinero(dineroIngresado);
-		}while(dineroIngresado<=0);
-		do {
-		System.out.println("Seleccione la opciÃ³n que desea");
-		System.out.println("1)Ingresar dinero");
-		System.out.println("2)Para ver el saldo actual del monedero");
-		System.out.println("3)Retirar dinero");
+		System.out.println("1)Crear un monedero");
+		System.out.println("2)Ingresar dinero");
+		System.out.println("3)Ver saldo del monedero");
+		System.out.println("4)Retirar dinero");
 		opcion=Leer.datoInt();
+		
 		switch (opcion) {
 		case 1:
-			System.out.println("Introduzca la cantidad de dinero que desea ingresar");
-			dineroIngresado=Leer.datoDouble();
-			m.ingresarDinero(m.getDinero(), dineroIngresado);
+			System.out.println("Ingresar dinero base del monedero");
+			dineroBase=Leer.datoDouble();
+			m=new Monedero(dineroBase);
+			System.out.println("Monedero creado con exito, saldo: "+m.getDinero());
 			break;
 		case 2:
-			System.out.println("El saldo es "+ m.getDinero());
+			if(dineroBase>1) {
+			System.out.println("Introduzca la cantidad de dinero que desea ingresar");
+			dineroIngresado=Leer.datoDouble();
+			dinero=m.getDinero()+dineroIngresado;
+			m.setDinero(dinero);
+			System.out.println("El nuevo saldo es de "+m.getDinero());
+			}else {
+				System.out.println("No haz creado aún ningun monedero");
+			}
 			break;
 		case 3:
-			System.out.println("Â¿Cuanto dinero desea retirar?");
-			dineroIngresado=Leer.datoDouble();
-			if(m.getDinero()>=dineroIngresado) {
-				m.retirarDinero(m.getDinero(), dineroIngresado);
-				System.out.println("TransacciÃ³n realizada con exito");
+			if(dineroBase>1) {
+			System.out.println("El saldo es de "+m.getDinero());
 			}else {
-				System.out.println("No tienes dinero suficiente");
+				System.out.println("Lo siento aún no haz creado ningun monedero");
 			}
+			break;
+		case 4:
+			System.out.println("Cuanto dinero desea retirar");
+			dineroRetirado=Leer.datoDouble();
+			if(dinero>=dineroRetirado) {
+			
+			dinero=m.getDinero()-dineroRetirado;
+			m.setDinero(dinero);
+			System.out.println("Dinero retirado con exito");
+		}else {
+			System.out.println("Dinero insuficiente");
+		}
 			break;
 		default:
 			break;
 		}
 		}while(opcion!=0);
-		
-		
 	}
+	
 
 }
