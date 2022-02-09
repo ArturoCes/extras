@@ -39,5 +39,29 @@ public class Electronica extends Producto{
 		
 	}
 	
+
 	
-}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	}

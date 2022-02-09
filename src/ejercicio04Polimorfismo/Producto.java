@@ -2,7 +2,7 @@ package ejercicio04Polimorfismo;
 
 public class Producto {
 	/**Atributos
-	 * Acá se declaran los atributos 
+	 * Acï¿½ se declaran los atributos 
 	 */
 	private double precioUnitario;
 	private String nombre;
@@ -34,7 +34,7 @@ public class Producto {
 	 * 
 	 * @param precioUnitario es el precio base por unidad de un producto
 	 * @param nombre del producto
-	 * @param codigoID es el número identificador de un producto
+	 * @param codigoID es el nï¿½mero identificador de un producto
 	 */
 	public Producto(double precioUnitario, String nombre, int codigoID) {
 		super();
@@ -50,7 +50,7 @@ public class Producto {
 		return "Producto [precioUnitario=" + precioUnitario + ", nombre=" + nombre + ", codigoID=" + codigoID + "]";
 	}
 	
-	public double calcularImpuestos (double impuestoAli,double impuestoEle,double impuestoRopac) {
+	public double calcularImpuestos (double impuestoAli,double impuestoEle,double impuestoRopa) {
 		return 0;
 	}
 	public double calcularPrecioFinal (double impuestoBase) {
