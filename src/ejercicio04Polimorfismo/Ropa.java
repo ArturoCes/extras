@@ -42,13 +42,11 @@ public class Ropa extends Producto{
 		double den=100;
 		int uno =1;
 		impuestoRopa=impuestoRopa/den;
-		return impuestoRopa+super.getPrecioUnitario();
+		return impuestoRopa*super.getPrecioUnitario();
 	}
-	public double calcuarPrecioFinal (double p) {
-		return super.getPrecioUnitario()+calcularImpuestos(p, p, p);
+	public double calcularPrecioFinal(double impuestoBase) {
+		return super.getPrecioUnitario()+calcularImpuestos(impuestoBase, impuestoBase, impuestoBase);
 		
-
 	}
-	
 
 }

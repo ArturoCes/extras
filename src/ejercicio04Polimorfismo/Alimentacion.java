@@ -29,9 +29,7 @@ public class Alimentacion extends Producto{
 	}
 	@Override
 	public double calcularImpuestos (double impuestoAli,double impuestoEle,double impuestoRopa) {
-		double porcentaje=5;
 		double den=100;
-		int uno = 1 ;
 		impuestoAli= impuestoAli/den;
 		return impuestoAli*super.getPrecioUnitario();	
 	

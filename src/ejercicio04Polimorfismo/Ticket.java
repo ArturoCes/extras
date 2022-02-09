@@ -29,22 +29,22 @@ public class Ticket {
 
 
 	public void imprimirFactura () {
-		double total=0,impuestosAli=2,impuestosEle=21,impuestosRopa=4;
+		double total=0,impuestosAli=10,impuestoEle=21,impuestosRopa=10;
 		System.out.println("****************************************************");
 		System.out.println("**                   TICKET                       **");
-		System.out.println(" Cantidad             Producto                 Precio");
+		System.out.println("Cntd\tProducto\tUnidad\tcon IVA\t\t Preciofinal");
 		for (int i = 0; i < lista.length; i++) {
 			String nombre =lista[i].getProducto().getNombre();
-			double precio1 = lista [i].getProducto().calcularImpuestos(impuestosAli, impuestosEle, impuestosRopa);
-			double precio = lista [i].getProducto().calcularPrecioFinal(precio1);
+			double precioUnitario=lista[i].getProducto().getPrecioUnitario();
+			double precio = lista [i].getProducto().calcularPrecioFinal(lista[i].getProducto().calcularImpuestos(impuestosAli, impuestoEle, impuestosRopa));
 			int cantidad  = lista [i].getCantidad();
 			double precioTotal= cantidad*precio;
 			total=total+precioTotal;
-			System.out.printf("%d \t%s \t%.2f \t%.2f",cantidad,nombre,precio,precioTotal,"\n");
+			System.out.printf("%d\t%s\t%.2f\t%.2f \t\t%.2f",cantidad,nombre,precioUnitario,precio,precioTotal,"\n");
 			System.out.println("\n__________________________________________________");
 		}
 		
-		System.out.println(total);
-		System.out.println("******************************************************");
+		System.out.printf("%.2f",total);
+		System.out.println("\n******************************************************");
 	} 
 }

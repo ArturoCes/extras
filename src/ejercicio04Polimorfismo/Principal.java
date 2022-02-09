@@ -8,11 +8,11 @@ public class Principal {
 		// TODO Auto-generated method stub
 		 int op =1;
 		 int tam= 5;
-		Producto producto= new Alimentacion (20, "Leche", 1,false);
-		Producto ali = new Alimentacion  (5, "Pan", 2, true);
-		Producto ali2 = new Alimentacion  (5, "Yogurt", 2, false);
+		Producto producto= new Alimentacion (100, "Leche", 1,false);
+		Producto ali = new Alimentacion  (100, "Pan", 2, true);
+		Producto ali2 = new Alimentacion  (100, "Yogurt", 2, false);
 		Producto pc = new Electronica (500, "RogStrix", 3, "Asus");
-		Producto pantalon = new Ropa (10, "Pantalon",4, "S", "Rojo");
+		Producto pantalon = new Ropa (100, "Pantalon",4, "S", "Rojo");
 		LineaDeVenta [] lineaA = new LineaDeVenta[tam];
 		LineaDeVenta linea = new LineaDeVenta (producto, 2);
 		LineaDeVenta linea2 = new LineaDeVenta (ali, 2);
@@ -28,7 +28,7 @@ public class Principal {
 		
 		
 		System.out.println("Bienvenido");
-		System.out.println("Elija la opción que desea");
+		System.out.println("Elija la opciÃ³n que desea");
 		do {
 		System.out.println("1) Para ver todos los productos");
 		System.out.println("2)Para imprimir factura");
