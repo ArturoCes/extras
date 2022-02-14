@@ -1,6 +1,6 @@
 package ejemploClaseInterface;
 
-public class CardaDeBienvenida extends Carta {
+public class CartaDeBienvenida extends Carta {
 	
 	private String 
 }
