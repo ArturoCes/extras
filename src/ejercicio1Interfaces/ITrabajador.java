@@ -1,6 +1,6 @@
 package ejercicio1Interfaces;
 
-public class Producto implements IImpuesto{
+public class ITrabajador implements IImpuesto{
 
 	@Override
 	public double calculolva(double precio, int va) {
