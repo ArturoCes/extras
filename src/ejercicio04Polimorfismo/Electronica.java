@@ -31,11 +31,11 @@ public class Electronica extends Producto{
 	public double calcularImpuestos (double impuestoAli, double impuestoEle, double impuestoRopa) {
 		int den=100;
 		impuestoEle=impuestoEle/den;
-		return impuestoEle*super.getPrecioUnitario();
+		return impuestoEle*getPrecioUnitario();
 		
 	}
 	public double calcularPrecioFinal(double impuestoBase) {
-		return super.getPrecioUnitario()+calcularImpuestos(impuestoBase, impuestoBase, impuestoBase);
+		return getPrecioUnitario()+impuestoBase;
 		
 	}
 	

@@ -45,7 +45,7 @@ public class Ropa extends Producto{
 		return impuestoRopa*super.getPrecioUnitario();
 	}
 	public double calcularPrecioFinal(double impuestoBase) {
-		return super.getPrecioUnitario()+calcularImpuestos(impuestoBase, impuestoBase, impuestoBase);
+		return super.getPrecioUnitario()+impuestoBase;
 		
 	}
 

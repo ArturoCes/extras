@@ -20,7 +20,7 @@ public class Principal {
 		switch (opcion) {
 			case 1:
 				System.out.println("Presiona 1 para generar billete aleatoriamente");
-				System.out.println("Presiona 2 para ingresar los n�meros de forma manual");
+				System.out.println("Presiona 2 para ingresar los números de forma manual");
 				opcion=Leer.datoInt();
 				switch (opcion) {
 				case 1:
