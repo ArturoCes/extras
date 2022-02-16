@@ -1,5 +1,9 @@
 package ejercicio05array;
-
+/**
+ * 
+ * @author Arturo
+ *En  esta clase se gestionan electrodomesticos.
+ */
 public class Electrodomestico {
 	private double precioBase;
 	private String color;
@@ -55,10 +59,18 @@ public class Electrodomestico {
 		return "Electrodomestico [precioBase=" + precioBase + ", color=" + color + ", consumoElectrico=" + consumoElectrico
 				+ ", peso=" + peso + "]";
 	}
+	/**
+	 * El método comprobar color nos sirve para comparar el color puesto por el usuario
+	 * con los colores que esten en el array de colores.
+	 */
 	public void comprobarColor () {
 		boolean disponible=true;
 		String color []= {"Azul","Blanco","Negro","Naranja","Marron"};
 		for (int i = 0; i < color.length; i++) {
+			/**
+			 * En esta parte del for comprueba si hay  el color puesto por el cliente 
+			 * disponible para ese producto y devuelve un boolean .
+			 */
 			if(this.color.equalsIgnoreCase(color[i])) {
 				disponible=false;
 				
