@@ -20,6 +20,7 @@ public class CuentaCorriente extends Cuenta {
 		return super.toString()+"CuentaCorriente [mantenimientoFijo=" + mantenimientoFijo + "]";
 	}
 	public double ingresarDinero (double ingreso) {
+		
 		double res= getSaldoCuenta()+ingreso-mantenimientoFijo;
 		setSaldoCuenta(res);
 		return res;

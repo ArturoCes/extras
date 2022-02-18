@@ -1,6 +1,7 @@
 package ejercicio6HerenciaPolimorfismo;
 
-public class Cuenta {
+public abstract class Cuenta {
+	
 	private double saldoCuenta;
 	private String nombrePropietario;
 	//Constructor
