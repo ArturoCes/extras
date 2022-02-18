@@ -29,7 +29,7 @@ public class GestionHabitaciones {
 		for (int i = 0; i < h.length; i++) {
 		System.out.println(h[i]);
 		}
-	}
+	} 
 	public double recaudacionTotal (int contador,int porcentaje, double precio) {
 		double suma=0;
 		for (int i = 0; i<contador;i++) {
