@@ -25,14 +25,16 @@ public class EspadaLaser extends Producto {
 	}
 
 	// Methods
-	public double calcularPVP(double ganancia) {
+	public double calcularPVP(double ganancia,double fijo) {
 		String tipoEsp = "double";
-		double cien = 100;
 		if (tipo.equalsIgnoreCase(tipoEsp)) {
-			return getPrecioBase() + ganancia + cien;
+			return getPrecioBase() + ganancia + fijo;
 		} else {
 			return getPrecioBase() + ganancia;
 		}
 
+	}
+	public void imprimirMensaje () {
+		System.out.println("Cuidaó que hace pupita");
 	}
 }

@@ -56,6 +56,6 @@ public abstract class Producto {
 	}
 
 	// Methods
-	public abstract double calcularPVP(double ganancia);
+	public abstract double calcularPVP(double ganancia,double fijo);
 
 }

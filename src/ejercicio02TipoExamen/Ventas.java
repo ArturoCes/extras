@@ -37,13 +37,13 @@ public class Ventas {
 	}
 
 	public void productosSinVender() {
-		
+
 		for (int i = 0; i < lista.length; i++) {
 			if (!lista[i].isVendido()) {
 				System.out.println(i + 1 + ".-" + lista[i]);
 			}
 		}
-		
+
 	}
 
 	public void imprimirProductos() {
@@ -52,25 +52,25 @@ public class Ventas {
 		}
 	}
 
-	public double venderProducto(double dinero, int posicion, double ganancia) {
+	public double venderProducto(double dinero, int posicion, double ganancia, double fijo) {
 		int uno = 1;
 
-		if (dinero >= lista[posicion - 1].getPrecioBase()+ganancia) {
+		if (dinero >= lista[posicion - 1].getPrecioBase() + ganancia) {
 			lista[posicion - 1].setCantidad(lista[posicion - 1].getCantidad() - uno);
 
 			if (lista[posicion - 1].getCantidad() == 0) {
 				lista[posicion - 1].setVendido(true);
 			}
-			cantidadTotal = cantidadTotal + lista[posicion - 1].calcularPVP(ganancia);
-			if (lista[posicion - 1] instanceof EspadaLaser) {
-				System.out.println("Cuidao que hace pupa");
+			cantidadTotal = cantidadTotal + lista[posicion - 1].calcularPVP(ganancia, fijo);
+			if (lista[posicion-1]instanceof EspadaLaser) {
+				((EspadaLaser)lista[posicion-1]).imprimirMensaje();
 			}
-			return dinero - lista[posicion - 1].calcularPVP(ganancia);
+			return dinero - lista[posicion - 1].calcularPVP(ganancia, fijo);
 		} else {
 			System.out.println("Dinero insuficiente");
 		}
 		return dinero;
 
 	}
-	
+
 }

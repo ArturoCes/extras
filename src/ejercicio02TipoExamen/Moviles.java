@@ -43,7 +43,7 @@ public class Moviles extends Producto {
 
 
 	// Methods
-	public double calcularPVP(double ganancia) {
+	public double calcularPVP(double ganancia,double fijo) {
 		return getPrecioBase() + ganancia;
 	}
 }

@@ -7,7 +7,7 @@ public class Principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int tam = 3, op = 0, posicion;
-		double dinero = 0.0, ganancia = 0.0;
+		double dinero = 0.0, ganancia = 0.0,fijo=100;
 		Producto[] lista = new Producto[tam];
 		lista[0] = new Moviles(100, 2, "Movil", false, "Samsung", "Galaxy One");
 		lista[1] = new EspadaLaser(200, 2, "Leader", false, "Double");
@@ -15,7 +15,7 @@ public class Principal {
 		Ventas v = new Ventas(lista);
 
 		System.out.println("Bienvenido");
-		System.out.println("Seleccione la operación que desea realizar");
+		System.out.println("Seleccione la operaciï¿½n que desea realizar");
 		do {
 			System.out.println("0)Para salir");
 			System.out.println("1)Mostrar lista de productos sin vender");
@@ -39,14 +39,14 @@ public class Principal {
 				v.productosSinVender();
 				posicion = Leer.datoInt();
 				if (posicion > lista.length || lista[posicion - 1].isVendido()) {
-					System.out.println("Error, número de producto inexistente");
+					System.out.println("Error, nÃºmero de producto inexistente");
 				} else {
 					System.out.println("Ingrese la cantidad de dinero que le ha dado el comprador");
 					dinero = Leer.datoDouble();
 					System.out.println("Ingrese la cantidad de ganancia que quiere tener con esta venta");
 					ganancia = Leer.datoDouble();
 
-					System.out.println("Su cambio es de: " + v.venderProducto(dinero, posicion, ganancia));
+					System.out.println("Su cambio es de: " + v.venderProducto(dinero, posicion, ganancia,fijo));
 				}
 				break;
 			case 0:
@@ -54,7 +54,7 @@ public class Principal {
 				break;
 
 			default:
-				System.out.println("Ingrese una opción valida");
+				System.out.println("Ingrese una opciÃ³n valida");
 				break;
 
 			}
