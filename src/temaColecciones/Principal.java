@@ -16,6 +16,11 @@ public class Principal {
 		listaAlumnos.add(a);
 		listaAlumnos.add(b);
 		listaAlumnos.add(c);
+		
+		System.out.println(listaAlumnos);
+		System.out.println(listaAlumnos.size());
+		
+		
 		/*List<String> lista = new ArrayList<String>(); 
 		List<Integer>lista2 = new ArrayList <Integer>();
 		lista2.add(2);
@@ -26,7 +31,7 @@ public class Principal {
 		
 		
 	
-		System.out.println(listaAlumnos);
-	}
+	
+	}	
 
 }
