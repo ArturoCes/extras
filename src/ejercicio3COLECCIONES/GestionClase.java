@@ -36,7 +36,25 @@ public class GestionClase {
 		return "GestionClase [lista=" + lista + ", nombreClase=" + nombreClase + "]";
 	}
 	
-
+	public void agregarAlumnoNuevo(Alumno alumno) {
+		lista.add(alumno);
+	}
+	
+	public void buscarAlumno(String nombre,String nombreNuevo) {
+		for (Alumno alumno : lista) {
+			if(alumno.getNombre().equalsIgnoreCase(nombre)) {
+				System.out.println("Alumno encontrado");
+				alumno.modificarNombre(nombreNuevo);
+				
+				
+			}else {
+				System.out.println("No se ha encontrado");
+			}
+		
+		}
+	}
+	}
+	
 	
 
 	
@@ -44,4 +62,4 @@ public class GestionClase {
 	
 	
 	
-}	
+	

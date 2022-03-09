@@ -5,7 +5,7 @@ public class Oficina {
 	private Cuenta cuenta;
 	private int id;
 	
-	//Construsctor
+	//Constructor
 	public Oficina(Cuenta c, int id) {
 		super();
 		this.cuenta = c;

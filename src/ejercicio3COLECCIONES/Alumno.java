@@ -44,4 +44,8 @@ public class Alumno {
 		return "Alumno [nombre=" + nombre + ", apellido=" + apellido + ", notaMedia=" + notaMedia + "]";
 	}
 	
+	public void modificarNombre (String nombreNuevo) {
+		setNombre(nombreNuevo);
+		System.out.println("Nombre modificado correctamente.");
+	}
 }
