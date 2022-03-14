@@ -1,6 +1,7 @@
 package ejercicio3COLECCIONES;
 
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.Set;
 
 public class GestionClase {
@@ -53,6 +54,22 @@ public class GestionClase {
 		
 		}
 	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(lista, nombreClase);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		GestionClase other = (GestionClase) obj;
+		return Objects.equals(lista, other.lista) && Objects.equals(nombreClase, other.nombreClase);
+	}
+	
 	}
 	
 	
