@@ -36,23 +36,8 @@ public class Agenda {
 	public String toString() {
 		return "Agenda [lista=" + lista + ", fecha=" + fecha + "]";
 	}
-	//Hash Code & Equals
-	@Override
-	public int hashCode() {
-		return Objects.hash(fecha, lista);
+	public void addContacto(Contacto contacto, String telefono) {
+		lista.put(contacto, telefono);
 	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Agenda other = (Agenda) obj;
-		return Objects.equals(fecha, other.fecha) && Objects.equals(lista, other.lista);
-	}
-	
-
 }
+	
