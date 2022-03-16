@@ -1,5 +1,6 @@
 package ejercicio4COLECCIONESHASHMAP;
 
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Objects;
 
@@ -38,6 +39,19 @@ public class Agenda {
 	}
 	public void addContacto(Contacto contacto, String telefono) {
 		lista.put(contacto, telefono);
+	}
+	public Contacto buscarPorNombre(String nuevoNombre) {
+		Iterator <Contacto> it = lista.keySet().iterator();
+		Contacto tmp =null;
+		boolean encontrado=false;
+		while(it.hasNext() && !encontrado) {
+			tmp= it.next();
+			if(tmp.getNombre().equalsIgnoreCase(nuevoNombre)) {
+				encontrado=true;
+				return tmp;
+			}
+		}
+		return null;
 	}
 }
 	
