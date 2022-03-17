@@ -1,5 +1,11 @@
 package ejercicio06COLECCIONES;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import lectura.Leer;
+
 public class Principal {
 
 	public static void main(String[] args) {
@@ -11,11 +17,15 @@ public class Principal {
 	//		Guardar varios trabajadores en una colección y mostrar los trabajadores ordenados según el número de horas
 	//		trabajadas o según el sueldo (del que menos al que más cobra). Se deben usar comparable o comparator.
 //		
+		List <Trabajador>lista = new ArrayList ();
+		String direccion = null;
+		Empresa empresa = new Empresa(lista, direccion);
 		int opcion= 0;
 		System.out.println("Bienvenido");
 		System.out.println("Indique la opción que desea realizar");
 		
 		do {
+			opcion=Leer.datoInt();
 			System.out.println("1)Para añadir nuevo trabajador");
 			System.out.println("2)Para eliminar un trabajador");
 			System.out.println("3)Para buscar un trabajador");
@@ -31,9 +41,11 @@ public class Principal {
 			case 3:
 				break;
 			case 4:
-				
+				Collections.sort(empresa.getLista());
+				empresa.mostrarLista();
 				break;
 			case 5:
+				Collections.sort(empresa.getLista(),new OrdenarPorSueldo());
 				break;
 			case 6:
 				break;
