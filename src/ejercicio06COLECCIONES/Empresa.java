@@ -36,6 +36,11 @@ public class Empresa {
 	public String toString() {
 		return "Empresa [lista=" + lista + ", direccion=" + direccion + "]";
 	}
+	public void mostrarLista () {
+		for (int i = 0; i < lista.size(); i++) {
+			System.out.println(lista.get(i).getDni());	
+		}
+		}
+	}
 	
-	
-}
+
